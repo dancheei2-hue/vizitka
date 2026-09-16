@@ -8,7 +8,7 @@
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏠</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -21,13 +21,7 @@
     <img class="hero-photo" src="assets/danil.jpg" alt="Данил Аверин, риелтор в Ижевске">
     <div class="hero-overlay"></div>
     <div class="hero-top">
-      <div class="hero-logo">
-        <div class="logo-word">
-          <span class="logo-samolet">самолет</span>
-          <span class="logo-plus">плюс</span>
-        </div>
-        <div class="logo-caption">Агентство<br>недвижимости</div>
-      </div>
+      <img class="hero-logo-img" src="assets/samolet-plus-logo.png" alt="Самолёт плюс — агентство недвижимости">
     </div>
     <div class="hero-bottom">
       <h1>Аверин Данил</h1>
@@ -76,9 +70,9 @@
         <a class="mini" href="https://t.me/averin_creative" target="_blank" rel="noopener">
           <span class="mini-icon-circle telegram"><span class="mini-icon">✈️</span></span><span>Telegram</span>
         </a>
-        <button class="mini" id="maxBtn1">
+        <a class="mini" href="https://max.ru/u/f9LHodD0cOKgsUyGlNAa-uJ-TcxBt1HsY5UN0ZP4zNli0_3eocjdSKRvHJI" target="_blank" rel="noopener">
           <span class="mini-icon-circle max"><span class="mini-icon">💬</span></span><span>MAX</span>
-        </button>
+        </a>
         <a class="mini" href="https://vk.ru/averin_danil" target="_blank" rel="noopener">
           <span class="mini-icon-circle vk"><span class="mini-icon vk-glyph">VK</span></span><span>ВКонтакте</span>
         </a>
@@ -112,27 +106,6 @@
   </footer>
 
 </main>
-
-<div class="toast" id="toast">Номер скопирован — вставьте в MAX</div>
-
-<script>
-  function copyMaxNumber() {
-    const phone = '+7 951 200-21-82';
-    const toast = document.getElementById('toast');
-    const showToast = () => {
-      toast.classList.add('show');
-      setTimeout(() => toast.classList.remove('show'), 2400);
-    };
-    if (navigator.clipboard) {
-      navigator.clipboard.writeText(phone).then(showToast).catch(showToast);
-    } else {
-      showToast();
-    }
-  }
-
-  const maxBtn = document.getElementById('maxBtn1');
-  if (maxBtn) maxBtn.addEventListener('click', copyMaxNumber);
-</script>
 
 </body>
 </html>
